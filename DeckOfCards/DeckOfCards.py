@@ -33,10 +33,10 @@ class DeckOfCards:
         return self.cards.pop(pop_card)
 
 
-maxim = DeckOfCards()
-print(maxim.cards)
-print("\n")
-print(maxim.deal_one())
-print("\n")
-print(maxim.cards)
-print("maxim")
+# maxim = DeckOfCards()
+# print(maxim.cards)
+# print("\n")
+# print(maxim.deal_one())
+# print("\n")
+# print(maxim.cards)
+# print("maxim")
