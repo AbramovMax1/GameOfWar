@@ -7,7 +7,6 @@ class Player:
         self.name = name
         self.list_cards_of_player = []
         self.count_of_cards = count_of_cards
-
         if self.count_of_cards > 26 or self.count_of_cards < 10:
             self.count_of_cards = 26
 
@@ -21,7 +20,6 @@ class Player:
         for i in range(self.count_of_cards):
             picked_card = deck.deal_one()
             self.list_cards_of_player.append(picked_card)
-            return self.list_cards_of_player
 
     def get_card(self):
         pass
@@ -30,6 +28,8 @@ class Player:
         pass
 
 
-maxim = Player("Maxim", 26)
+d = DeckOfCards()
+maxim = Player("Maxim", 12)
+maxim.set_hand(d)
 print(maxim)
 
