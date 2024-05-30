@@ -3,9 +3,9 @@ import pyfiglet
 from colorama import Fore
 # =============================================
 game_title = pyfiglet.figlet_format("Game Of War", font="doom")
-print(Fore.LIGHTGREEN_EX + game_title)
+print(Fore.MAGENTA + game_title)
 # =============================================
-print(Fore.YELLOW + "==========♦️♠️♥️♣️============"
+print(Fore.BLUE + "==========♦️♠️♥️♣️============"
       "\nWelcome to Game Of War\nHere you will fight against one opponent\nEvery player gets 26 cards."
       "\nEvery player will throw one card and who get the higher card takes those 2 cards"
       "\nThe player who have less cards then his opponent after 10 rounds loss,"
@@ -35,7 +35,7 @@ for i in range(1, 11):
     if card_p1 > card_p2:
         start_game.player1.add_card(card_p1)
         start_game.player1.add_card(card_p2)
-        print(f"{start_game.player1.name} wins this round\n=======+♦️♠️♥️♣️========")
+        print(f"{start_game.player1.name} wins this round\n========♦️♠️♥️♣️========")
     else:
         start_game.player2.add_card(card_p1)
         start_game.player2.add_card(card_p2)
@@ -44,7 +44,7 @@ for i in range(1, 11):
 # =============================================
 print(Fore.GREEN + start_game.get_winner())
 # =============================================
-print(Fore.LIGHTYELLOW_EX + "==========♦️♠️♥️♣️============"
+print(Fore.BLUE + "==========♦️♠️♥️♣️============"
       "\nCREDITS:\n"
       "(Created) by Shirel and Maxim\n"
       "(Welcome message) by Gil Andreyev\n==========♦️♠️♥️♣️============")
