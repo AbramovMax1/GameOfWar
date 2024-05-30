@@ -6,6 +6,8 @@ class Card:
             raise TypeError("I accept only digit numbers")
         if type(suit) != str:
             raise TypeError("I accept only string here")
+        if value < 1 or value > 13:
+            raise ValueError
 
         self.value = value
         self.suit = suit

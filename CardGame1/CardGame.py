@@ -35,7 +35,3 @@ class CardGame:
             return f"{self.player2.name} WINS THIS GAME"
         if self.player1.count_of_cards == self.player2.count_of_cards:
             return f"TIE no one win!"
-
-
-# game_try = CardGame1('maxim', 'levi', 5, 19)
-# print(game_try)
