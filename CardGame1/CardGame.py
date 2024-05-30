@@ -1,5 +1,5 @@
-from DeckOfCards.DeckOfCards import DeckOfCards
-from Player.Player import Player
+from DeckOfCards1.DeckOfCards import DeckOfCards
+from Player1.Player import Player
 
 
 class CardGame:
@@ -37,5 +37,5 @@ class CardGame:
             return f"TIE no one win!"
 
 
-# game_try = CardGame('maxim', 'levi', 5, 19)
+# game_try = CardGame1('maxim', 'levi', 5, 19)
 # print(game_try)

@@ -1,4 +1,4 @@
-from CardGame.CardGame import CardGame
+from CardGame1.CardGame import CardGame
 import pyfiglet
 from colorama import Fore
 # =============================================

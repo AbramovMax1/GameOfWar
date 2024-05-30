@@ -1,6 +1,6 @@
-from DeckOfCards.DeckOfCards import DeckOfCards
+from DeckOfCards1.DeckOfCards import DeckOfCards
 from random import choice
-from Card.Card import Card
+from Card1.Card import Card
 
 
 class Player:
