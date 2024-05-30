@@ -3,14 +3,14 @@ import pyfiglet
 from colorama import Fore
 # =============================================
 game_title = pyfiglet.figlet_format("GameOfWar", font="doom")
-print(game_title)
+print(Fore.RESET + game_title)
 # =============================================
-print("==============================="
+print("==========♦️♠️♥️♣️============"
       "\nWelcome to Game Of War\nHere you will fight against one opponent\nEvery player gets 26 cards."
       "\nEvery player will throw one card and who get the higher card takes those 2 cards"
       "\nThe player who have less cards then his opponent after 10 rounds loss,"
       "\nAnd the player who have more cards then the opponent win!\nGood Luck and Have Fun"
-      "\n===============================")
+      "\n==========♦️♠️♥️♣️============")
 # =============================================
 player_name_1 = input("Enter Player1 name :")
 amount_cards_1 = 26
@@ -21,7 +21,7 @@ amount_cards_2 = 26
 start_game = CardGame(player_name_1, player_name_2, amount_cards_1, amount_cards_2)
 print(start_game)
 # =============================================
-print("\n====================")
+print("\n==========♦️♠️♥️♣️============")
 for i in range(1, 11):
     print(f"ROUND {i}")
     card_p1 = start_game.player1.get_card()
@@ -43,7 +43,8 @@ for i in range(1, 11):
 # =============================================
 print(start_game.get_winner())
 # =============================================
-print("==============================="
-      "\nCredits:\n"
-      "Created by Shirel and Maxim\n===============================")
+print("==========♦️♠️♥️♣️============"
+      "\nCREDITS:\n"
+      "Created by Shirel and Maxim\n"
+      "welcome message by Gil Andreyev(The King)\n==========♦️♠️♥️♣️============")
 # =============================================
