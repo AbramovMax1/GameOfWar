@@ -47,5 +47,5 @@ print(Fore.GREEN + start_game.get_winner())
 print(Fore.BLUE + "==========♦️♠️♥️♣️============"
       "\nCREDITS:\n"
       "(Created) by Shirel and Maxim\n"
-      "(Welcome message) by Gil Andreyev\n==========♦️♠️♥️♣️============")
+      "\n==========♦️♠️♥️♣️============")
 # =============================================
