@@ -7,7 +7,6 @@ class DeckOfCards:
     def __init__(self):
         """Here we are making deck of cards"""
         self.cards = []
-
         # The suit are build with 2 index!!!
         list_of_suits = ["♦️", "♠️", "♥️", "♣️"]
         for value in range(1, 14):
@@ -29,5 +28,6 @@ class DeckOfCards:
         shuffle(self.cards)
 
     def deal_one(self):
+        """Here we are take one card out from our deck"""
         pop_card = choice(range(len(self.cards)))
         return self.cards.pop(pop_card)
