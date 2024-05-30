@@ -1,4 +1,4 @@
-from Card.Card import Card
+from Card1.Card import Card
 from random import shuffle
 from random import choice
 
