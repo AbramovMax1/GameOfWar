@@ -1,5 +1,4 @@
 class Card:
-
     def __init__(self, value: int, suit: str):
         """We give to card value and power for Comparison of forces"""
         self.value = value
@@ -19,11 +18,13 @@ class Card:
         return f"{self.value}{self.suit}"
 
     def __gt__(self, other):
+        """Measure which object (card) is bigger"""
         if self.power > other.power:
             return True
         return False
 
     def __eq__(self, other):
+        """compares objects (cards)"""
         if self.value == other.value:
             return True
         return False
