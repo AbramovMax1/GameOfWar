@@ -1,4 +1,5 @@
 from DeckOfCards.DeckOfCards import DeckOfCards
+from random import choice
 from Card.Card import Card
 
 
@@ -11,10 +12,10 @@ class Player:
             self.count_of_cards = 26
 
     def __str__(self):
-        return f"name :{self.name}\nyour cards :{self.list_cards_of_player}"
+        return f"Player name :{self.name}\nyou have {self.count_of_cards} cards :{self.list_cards_of_player}"
 
     def __repr__(self):
-        return f"name"
+        return f"Player name :{self.name} you have {self.count_of_cards} cards cards :{self.list_cards_of_player}"
 
     def set_hand(self, deck: DeckOfCards):
         for i in range(self.count_of_cards):
@@ -22,14 +23,10 @@ class Player:
             self.list_cards_of_player.append(picked_card)
 
     def get_card(self):
-        pass
+        self.count_of_cards -= 1
+        pop_card = choice(range(len(self.list_cards_of_player)))
+        return self.list_cards_of_player.pop(pop_card)
 
-    def add_card(self):
-        pass
-
-
-d = DeckOfCards()
-maxim = Player("Maxim", 12)
-maxim.set_hand(d)
-print(maxim)
-
+    def add_card(self, card: Card):
+        self.count_of_cards += 1
+        self.list_cards_of_player.append(card)

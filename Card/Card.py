@@ -6,20 +6,17 @@ class Card:
         self.suit = suit
         self.power = 0
 
-    def __str__(self):
-        return f"your card :[{self.value}:{self.suit}]"
-
     def __repr__(self):
         """Giving Value and suit to our Card"""
         if self.value == 1:
-            return f"Ace:{self.suit}:{self.power}"
+            return f"A{self.suit}"
         if self.value == 11:
-            return f"Jack:{self.suit}:{self.power}"
+            return f"J{self.suit}"
         if self.value == 12:
-            return f"Queen:{self.suit}:{self.power}"
+            return f"Q{self.suit}"
         if self.value == 13:
-            return f"King:{self.suit}:{self.power}"
-        return f"{self.value}:{self.suit}:{self.power}"
+            return f"K{self.suit}"
+        return f"{self.value}{self.suit}"
 
     def __gt__(self, other):
         if self.power > other.power:
