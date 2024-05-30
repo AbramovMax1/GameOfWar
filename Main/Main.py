@@ -2,19 +2,20 @@ from CardGame.CardGame import CardGame
 import pyfiglet
 from colorama import Fore
 # =============================================
-game_title = pyfiglet.figlet_format("GameOfWar", font="doom")
-print(Fore.RESET + game_title)
+game_title = pyfiglet.figlet_format("Game Of War", font="doom")
+print(Fore.LIGHTGREEN_EX + game_title)
 # =============================================
-print("==========♦️♠️♥️♣️============"
+print(Fore.YELLOW + "==========♦️♠️♥️♣️============"
       "\nWelcome to Game Of War\nHere you will fight against one opponent\nEvery player gets 26 cards."
       "\nEvery player will throw one card and who get the higher card takes those 2 cards"
       "\nThe player who have less cards then his opponent after 10 rounds loss,"
       "\nAnd the player who have more cards then the opponent win!\nGood Luck and Have Fun"
       "\n==========♦️♠️♥️♣️============")
+print(Fore.RESET)
 # =============================================
-player_name_1 = input("Enter Player1 name :")
+player_name_1 = input("Enter Player1 name :").strip().capitalize()
 amount_cards_1 = 26
-player_name_2 = input("Enter Player2 name :")
+player_name_2 = input("Enter Player2 name :").strip().capitalize()
 amount_cards_2 = 26
 
 # =============================================
@@ -29,21 +30,21 @@ for i in range(1, 11):
 
     print(f"[{player_name_1}] have {start_game.player1.count_of_cards} cards Pulled --->{card_p1}"
           f" against "
-          f"{card_p2} <--- [{player_name_2}] Have {start_game.player2.count_of_cards} cards")
+          f"{card_p2}<--- [{player_name_2}] Have {start_game.player2.count_of_cards} cards")
 
     if card_p1 > card_p2:
         start_game.player1.add_card(card_p1)
         start_game.player1.add_card(card_p2)
-        print(f"{start_game.player1.name} win this round\n====================")
+        print(f"{start_game.player1.name} wins this round\n=======+♦️♠️♥️♣️========")
     else:
         start_game.player2.add_card(card_p1)
         start_game.player2.add_card(card_p2)
-        print(f"{start_game.player2.name} win this round\n====================")
+        print(f"{start_game.player2.name} wins this round\n========♦️♠️♥️♣️========")
 
 # =============================================
-print(start_game.get_winner())
+print(Fore.GREEN + start_game.get_winner())
 # =============================================
-print("==========♦️♠️♥️♣️============"
+print(Fore.LIGHTYELLOW_EX + "==========♦️♠️♥️♣️============"
       "\nCREDITS:\n"
       "Created by Shirel and Maxim\n"
       "welcome message by Gil Andreyev(The King)\n==========♦️♠️♥️♣️============")
