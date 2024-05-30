@@ -11,6 +11,11 @@ class Player:
         if self.count_of_cards > 26 or self.count_of_cards < 10:
             self.count_of_cards = 26
 
+        if type(self.name) != str:
+            raise TypeError("need to be str!")
+        if type(self.count_of_cards) != int:
+            raise TypeError("need to be int!")
+
     def __str__(self):
         return f"Player name :{self.name}\nyou have {self.count_of_cards} cards :{self.list_cards_of_player}"
 

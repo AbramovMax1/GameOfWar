@@ -1,1 +1,1 @@
-Pyfiglet and colorama need to bee added to your pychram
+Pyfiglet and colorama need to be added to your pychram
