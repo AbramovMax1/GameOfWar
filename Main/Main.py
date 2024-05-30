@@ -13,9 +13,9 @@ print(Fore.YELLOW + "==========♦️♠️♥️♣️============"
       "\n==========♦️♠️♥️♣️============")
 print(Fore.RESET)
 # =============================================
-player_name_1 = input("Enter Player1 name :").strip().capitalize()
+player_name_1 = input("Enter Player1 name :").strip()
 amount_cards_1 = 26
-player_name_2 = input("Enter Player2 name :").strip().capitalize()
+player_name_2 = input("Enter Player2 name :").strip()
 amount_cards_2 = 26
 
 # =============================================
@@ -46,6 +46,6 @@ print(Fore.GREEN + start_game.get_winner())
 # =============================================
 print(Fore.LIGHTYELLOW_EX + "==========♦️♠️♥️♣️============"
       "\nCREDITS:\n"
-      "Created by Shirel and Maxim\n"
-      "welcome message by Gil Andreyev(The King)\n==========♦️♠️♥️♣️============")
+      "(Created) by Shirel and Maxim\n"
+      "(Welcome message) by Gil Andreyev\n==========♦️♠️♥️♣️============")
 # =============================================
