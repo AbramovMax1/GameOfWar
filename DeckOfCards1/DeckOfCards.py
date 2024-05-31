@@ -19,6 +19,8 @@ class DeckOfCards:
             i.power = count
         for i in self.cards[:4]:
             i.power += 52
+        if type(self.cards) != list:
+            raise TypeError("no list no working")
 
     def __str__(self):
         return f"The cards is:{self.cards}"
