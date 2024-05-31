@@ -7,7 +7,7 @@ class Card:
         if type(suit) != str:
             raise TypeError("I accept only string here")
         if value < 1 or value > 13:
-            raise ValueError
+            raise ValueError("invalid value")
 
         self.value = value
         self.suit = suit
@@ -33,6 +33,6 @@ class Card:
 
     def __eq__(self, other):
         """compares objects (cards)"""
-        if self.value == other.value:
+        if self.power == other.power:
             return True
         return False

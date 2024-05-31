@@ -23,9 +23,16 @@ class Player:
         return f"Player name :{self.name} you have {self.count_of_cards} cards cards :{self.list_cards_of_player}"
 
     def set_hand(self, deck: DeckOfCards):
-        for i in range(self.count_of_cards):
-            picked_card = deck.deal_one()
-            self.list_cards_of_player.append(picked_card)
+        if type(deck) == int:
+            raise TypeError("it's not deck of cards")
+        if type(deck) == str:
+            raise TypeError("it's not deck of cards")
+        if type(deck):
+            for i in range(self.count_of_cards):
+                picked_card = deck.deal_one()
+                self.list_cards_of_player.append(picked_card)
+
+
 
     def get_card(self):
         self.count_of_cards -= 1
