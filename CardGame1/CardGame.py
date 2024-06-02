@@ -4,6 +4,10 @@ from Player1.Player import Player
 
 class CardGame:
     def __init__(self, name1: str, name2: str, amount_of_cards1: int, amount_of_cards2: int):
+        if type(name1) != str or type(name2) != str:
+            raise TypeError("I accept only str")
+        if type(amount_of_cards1) != int or type(amount_of_cards2) != int:
+            raise TypeError("I accept only digital numbers")
 
         player100 = Player(name1, amount_of_cards1)
         player200 = Player(name2, amount_of_cards2)
