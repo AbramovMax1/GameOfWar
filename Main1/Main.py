@@ -24,22 +24,30 @@ print(start_game)
 # =============================================
 print("\n==========♦️♠️♥️♣️============")
 for i in range(1, 11):
+    print(Fore.RED)
     print(f"ROUND {i}")
+    print(Fore.RESET)
     card_p1 = start_game.player1.get_card()
     card_p2 = start_game.player2.get_card()
 
-    print(f"[{player_name_1}] have {start_game.player1.count_of_cards} cards Pulled --->{card_p1}"
+    print(f"[{player_name_1}] card Pulled --->{card_p1}"
           f" against "
-          f"{card_p2}<--- [{player_name_2}] Have {start_game.player2.count_of_cards} cards")
+          f"{card_p2}<--- card Pulled [{player_name_2}]")
 
     if card_p1 > card_p2:
         start_game.player1.add_card(card_p1)
         start_game.player1.add_card(card_p2)
-        print(f"{start_game.player1.name} wins this round\n========♦️♠️♥️♣️========")
+        print(f"{start_game.player1.name} wins this round\n"
+              f"[{start_game.player1.name},have {start_game.player1.count_of_cards}] cards\n"
+              f"[{start_game.player2.name},have {start_game.player2.count_of_cards}] cards"
+              f"\n========♦️♠️♥️♣️========")
     else:
         start_game.player2.add_card(card_p1)
         start_game.player2.add_card(card_p2)
-        print(f"{start_game.player2.name} wins this round\n========♦️♠️♥️♣️========")
+        print(f"{start_game.player2.name} wins this round\n"
+              f"[{start_game.player1.name},have {start_game.player1.count_of_cards}] cards\n"
+              f"[{start_game.player2.name},have {start_game.player2.count_of_cards}] cards"
+              f"\n========♦️♠️♥️♣️========")
 
 # =============================================
 print(Fore.GREEN + start_game.get_winner())

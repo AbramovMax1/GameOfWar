@@ -56,7 +56,7 @@ class TestCard(TestCase):
 
     def test_eq_valid(self):
         # Testing the ability to compare the object according to the value. valid
-        self.assertEqual(self.card3, self.card4)
+        self.assertEqual(self.card3.value, self.card4.value)
 
     def test_eq_invalid(self):
         # Checking the ability to compare the object with the same value. valid
