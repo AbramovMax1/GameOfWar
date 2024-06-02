@@ -27,12 +27,10 @@ class Player:
             raise TypeError("it's not deck of cards")
         if type(deck) == str:
             raise TypeError("it's not deck of cards")
-        if type(deck):
+        if type(deck) == DeckOfCards:
             for i in range(self.count_of_cards):
                 picked_card = deck.deal_one()
                 self.list_cards_of_player.append(picked_card)
-
-
 
     def get_card(self):
         self.count_of_cards -= 1
@@ -40,5 +38,7 @@ class Player:
         return self.list_cards_of_player.pop(pop_card)
 
     def add_card(self, card: Card):
+        if type(card) != Card:
+            raise TypeError("I only get a card object")
         self.count_of_cards += 1
         self.list_cards_of_player.append(card)
