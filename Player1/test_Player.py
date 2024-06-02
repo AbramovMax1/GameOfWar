@@ -12,7 +12,6 @@ class TestPlayer(TestCase):
         self.dec = DeckOfCards()
         self.dec2 = DeckOfCards()
 
-
     def test_init_valid_name(self):
         # Checking to receive str in the name.
         self.assertEqual(str, type(self.player.name))
@@ -62,7 +61,7 @@ class TestPlayer(TestCase):
 
     @mock.patch('DeckOfCards1.DeckOfCards.DeckOfCards.deal_one', return_value=Card(1, "♦️"))
     def test_set_hand_equal(self, the_mock_deal_one):
-        shirel = Player("shirel",10)
+        shirel = Player("shirel", 10)
         shirel.set_hand(self.dec)
         self.assertEqual(Card(1, "♦️"), shirel.list_cards_of_player[0])
 
@@ -87,18 +86,21 @@ class TestPlayer(TestCase):
         self.assertNotEqual(9, len(a.list_cards_of_player))
 
     def test_get_card_len_valid(self):
+        # A test that drops a card from the amount of the player's deck
         a = Player("try", 26)
         a.set_hand(self.dec)
         a.get_card()
         self.assertEqual(25, a.count_of_cards)
 
     def test_get_card_len_invalid(self):
+        # A test that drops a card from the amount of the player's deck
         a = Player("try", 15)
         a.set_hand(self.dec)
         a.get_card()
         self.assertNotEqual(15, a.count_of_cards)
 
     def test_get_card_random(self):
+        # Checking that the received card is random
         self.player.set_hand(self.dec)
         a = [self.player.get_card(), self.player.get_card(), self.player.get_card()]
         self.player2.set_hand(self.dec2)
@@ -106,29 +108,35 @@ class TestPlayer(TestCase):
         self.assertNotEqual(a, b)
 
     def test_get_card_The_card_that_comes_out1(self):
+        # Checking the deleted card is the one that came out
         self.player.set_hand(self.dec)
         self.assertIn(self.player.get_card(), self.dec2.cards)
 
     def test_get_card_The_card_that_comes_out2(self):
+        # Checks the deleted card is a card that was on the list
         self.player.set_hand(self.dec)
         self.assertNotIn(self.player.get_card(), self.dec.cards)
 
     def test_add_card_type_valid(self):
+        # A checker that adds a card object to the deck
         card = self.dec.cards[0]
         self.player.add_card(card)
         self.assertEqual(Card, type(self.player.list_cards_of_player[0]))
 
     def test_add_card_type_invalid(self):
+        # A checker that adds a card object to the deck
         with self.assertRaises(TypeError):
             self.player.set_hand(self.dec)
             self.player.add_card(15)
 
     def test_add_same_card_valid(self):
+        # A checker that counts the addition
         card = self.dec.cards[0]
         self.player.add_card(card)
         self.assertEqual(card, self.player.list_cards_of_player[0])
 
     def test_add_same_card_valid2(self):
+        # Checks that the traded card is the one added
         card = self.dec.cards[0]
         self.player.add_card(card)
         self.assertNotEqual(0, self.player.count_of_cards)
